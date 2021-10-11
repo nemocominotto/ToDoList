@@ -1,0 +1,32 @@
+{
+    "items": [
+        {
+            "id": 3,
+            "title": "Deadline angular",
+            "content": "Inleveren to do app",
+            "date": "28 november",
+            "active": false
+        },
+        {
+            "id": 1,
+            "title": "Colruyt shoppen",
+            "content": "je moet nog naar de colruyt voor choco.",
+            "date": "5 oktober",
+            "active": true
+        },
+        {
+            "id": 2,
+            "title": "Fietsenmaker",
+            "content": "Je remmen laten controlleren.",
+            "date": "8 oktober",
+            "active": false
+        },
+        {
+            "id": 4,
+            "title": "Dokter",
+            "content": "Corona test laten doen",
+            "date": "10 oktober",
+            "active": true
+        }
+    ]
+}

@@ -1,0 +1,26 @@
+a:hover {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: #75bfbf;
+    color: white;
+    .groen, .rood {
+        color: white;
+    }
+}
+
+a {
+    color: black;
+    transition: 0.2s;
+}
+
+.bg-body {
+    background-color: #f0f0f2;
+}
+
+.rood {
+    color: #dc3545;
+}
+
+.groen {
+    color: #20c997;
+}

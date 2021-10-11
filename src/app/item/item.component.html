@@ -1,0 +1,17 @@
+<a class="shadow row p-3 bg-body rounded mt-4 ml-auto mr-auto col-12" *ngIf="item">
+    <div class="col-md-2 col-sm-12">
+        <span style="font-size: 48px;">
+            <i *ngIf="item.active" class="far fa-check-circle groen"></i>
+        </span>
+        <span style="font-size: 48px;">
+            <i *ngIf="item.active == false" class="far fa-times-circle rood"></i>
+        </span>
+    </div>
+    <div class="col-md-6 col-sm-12">
+        <h3>{{ item.title }}</h3>
+        <p>{{item.content}}</p>
+    </div>
+    <div class="col-md-4 col-sm-12">
+        <h3>{{item.date}}</h3>
+    </div>
+</a>
