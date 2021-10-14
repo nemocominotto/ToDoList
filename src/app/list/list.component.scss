@@ -1,4 +1,58 @@
-.btn {
-    background-color: darkgreen;
+td, th {
+    vertical-align: middle;
+}
+  
+button {
+    margin: 2px;
+}
+  
+.addBtn {
+    margin-bottom: 2rem;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a {
+    color: black;
+    transition: 0.2s;
+}
+
+.bg-body {
+    background-color: #f0f0f2;
+}
+
+.rood {
+    color: lightcoral;
+    //color: #dc3545;
+}
+
+.groen {
+    color: #20c997;
+}
+
+.roodBtn {
+    background-color: lightcoral;
+    color: white;
+    //color: #dc3545;
+}
+
+.roodBtn:hover {
+    background-color: darkred;
+}
+
+.groenBtn {
+    background-color: #20c997;
     color: white;
 }
+
+.groenBtn:hover{
+    background-color: darkgreen;
+}
+
+.alert {
+    background-color: #589ea6;
+    color: white;
+}
+  

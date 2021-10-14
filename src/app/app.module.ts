@@ -9,6 +9,8 @@ import { ItemComponent } from './item/item.component';
 import { ListComponent } from './list/list.component';
 
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { ItemFormComponent } from './item-form/item-form.component';
 
 @NgModule({
   declarations: [
@@ -17,11 +19,13 @@ import { HttpClientModule } from '@angular/common/http';
     MenuComponent,
     ItemComponent,
     ListComponent,
+    ItemFormComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

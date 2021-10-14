@@ -1,0 +1,27 @@
+<div style="height: 20px;"></div>
+<form (ngSubmit)="onSubmit()" #categoryForm="ngForm">
+    <div class="form-group">
+        <div class="mt-3">
+            <label for="title">Titel</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="titel" [(ngModel)]="item.title" #name="ngModel" required>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">Name is required</div>
+        </div>
+        <div class="mt-3">
+            <label for="content">Beschrijving</label>
+            <input type="text" class="form-control" id="content" name="content" placeholder="Beschrijving" [(ngModel)]="item.content" #name="ngModel" required>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">content is required</div>
+        </div>
+        <div class="mt-3">
+            <label for="date">Datum</label>
+            <input type="text" class="form-control" id="date" name="date" placeholder="datum" [(ngModel)]="item.date" #name="ngModel" required>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">date is required</div>
+        </div>
+        <div class="form-check form-switch mt-3">
+            <input class="form-check-input" type="checkbox" role="switch" id="active" name="active" placeholder="active" [(ngModel)]="item.active" #name="ngModel" required>
+            <label class="form-check-label" for="active">Active</label>
+            <div [hidden]="name.valid || name.pristine" class="alert alert-danger">active is required</div>
+        </div>
+    </div>
+    <button type="submit" class="btn btn-success" *ngIf="isAdd" [disabled]="isSubmitted">Add</button>
+    <button type="submit" class="btn btn-success" *ngIf="isEdit" [disabled]="isSubmitted">Save</button>
+</form>

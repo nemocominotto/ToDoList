@@ -1,10 +1,13 @@
-<a class="shadow row p-3 bg-body rounded mt-4 ml-auto mr-auto col-12" *ngIf="item">
+<a class="shadow row p-3 bg-body rounded mt-4 ml-auto mr-auto col-12" *ngIf="item.active == false">
     <div class="col-md-2 col-sm-12">
         <span style="font-size: 48px;">
             <i *ngIf="item.active" class="far fa-check-circle groen"></i>
         </span>
-        <span style="font-size: 48px;">
+        <!--<span style="font-size: 48px;">
             <i *ngIf="item.active == false" class="far fa-times-circle rood"></i>
+        </span>-->
+        <span style="font-size: 30px;">
+            <i class="fas fa-bell rood"></i>
         </span>
     </div>
     <div class="col-md-6 col-sm-12">

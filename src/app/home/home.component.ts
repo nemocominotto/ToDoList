@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import {Router} from '@angular/router';
 import { Item } from '../item';
 import { ItemService } from '../item.service';
-import { Observable } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-home',
@@ -15,6 +16,9 @@ export class HomeComponent implements OnInit {
   constructor(private itemService: ItemService) {}
 
   ngOnInit(): void {
-    this.items$ = this.itemService.getItems();  
+    this.items$ = this.itemService.getItems();
+  }
+
+  ngOnDestroy(): void {
   }
 }
