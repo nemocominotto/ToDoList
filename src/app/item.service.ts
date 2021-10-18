@@ -5,6 +5,8 @@ import { Item } from './item';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import { ThemaService } from './thema.service';
+import { Thema } from './thema';
 
 @Injectable({
   providedIn: 'root'

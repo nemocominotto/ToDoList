@@ -1,4 +1,4 @@
-<a class="shadow row p-3 bg-body rounded mt-4 ml-auto mr-auto col-12" *ngIf="item.active == false">
+<a class="shadow row p-3 bg-body rounded mt-4 ml-auto mr-auto col-12" (click)="edit(item.id)" *ngIf="item.active == false">
     <div class="col-md-2 col-sm-12">
         <span style="font-size: 48px;">
             <i *ngIf="item.active" class="far fa-check-circle groen"></i>
@@ -15,6 +15,6 @@
         <p>{{item.content}}</p>
     </div>
     <div class="col-md-4 col-sm-12">
-        <h3>{{item.date}}</h3>
+        <h3>{{item.date | date:'d MMMM'}}</h3>
     </div>
 </a>

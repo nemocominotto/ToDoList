@@ -1,8 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Subscription } from 'rxjs';
+import { Observable, Subscription } from 'rxjs';
 import { Item } from '../item';
 import { ItemService } from '../item.service';
+import { Thema } from '../thema';
+import { ThemaService } from '../thema.service';
 
 @Component({
   selector: 'app-item-form',
@@ -14,16 +16,18 @@ export class ItemFormComponent implements OnInit, OnDestroy {
   isEdit: boolean = false;
   itemId: number = 0;
 
-  item: Item = {id:0, title:"", content:"", date:"", active: false}
+  item: Item = {id:0, title:"", content:"", date: new Date(), active: false, themaId: 0};
 
   isSubmitted: boolean = false;
   errorMessage: string = "";
+
+  themas: Observable<Thema[]> = new Observable<Thema[]>();
 
   item$: Subscription = new Subscription();
   postItem$: Subscription = new Subscription();
   putItem$: Subscription = new Subscription();
 
-  constructor(private router: Router, private itemService: ItemService) {
+  constructor(private router: Router, private itemService: ItemService, private themaService: ThemaService) {
     this.isAdd = this.router.getCurrentNavigation()?.extras.state?.mode === 'add';
     this.isEdit = this.router.getCurrentNavigation()?.extras.state?.mode === 'edit';
     this.itemId = +this.router.getCurrentNavigation()?.extras.state?.id;
@@ -34,6 +38,7 @@ export class ItemFormComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
+    this.themas = this.themaService.getThemas();
   }
 
   ngOnDestroy(): void {

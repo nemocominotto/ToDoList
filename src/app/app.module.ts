@@ -11,6 +11,8 @@ import { ListComponent } from './list/list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ItemFormComponent } from './item-form/item-form.component';
+import { ThemaListComponent } from './thema-list/thema-list.component';
+import { ThemaFormComponent } from './thema-form/thema-form.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { ItemFormComponent } from './item-form/item-form.component';
     ItemComponent,
     ListComponent,
     ItemFormComponent,
+    ThemaListComponent,
+    ThemaFormComponent,
   ],
   imports: [
     BrowserModule,

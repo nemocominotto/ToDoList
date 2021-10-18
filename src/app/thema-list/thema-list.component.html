@@ -1,0 +1,29 @@
+<div class="container col-12 m-auto">
+    <div class="mt-4 pt-5 pb-3 alert shadow bg-body rounded text-center">
+        <h1><i class="fas fa-clipboard-list"></i> Theme</h1>
+        <div class="text-left">
+            <button type="button" (click)="add()" class="btn btn-light shadow p-2"><i class="fas fa-plus"></i> New theme</button>
+        </div>
+    </div>
+    <div *ngFor="let thema of themas" class="container col-12 m-auto row">
+        <a class="shadow row p-3 bg-body rounded mt-4 mr-auto col-10 col-sm-11" (click)="edit(thema.id)">
+            <div class="col-md-2 col-sm-12">
+                <span style="font-size: 48px;">
+                    <i class="fas fa-circle" [ngStyle]="{color: thema.color}"></i>
+                </span>
+            </div>
+            <div class="col-md-4 col-sm-12">
+                <h3>{{thema.name}}</h3>
+            </div>
+            <!--<div class="col-sm-12 m-auto col-md-4 col-lg-2 row">
+                <div class="col-12 text-center">
+                    <button type="button" onClick="window.location.reload();" class="btn roodBtn col-sm-12 col-md-6" (click)="delete(thema.id)"><i class="far fa-trash-alt"></i></button>
+                </div>
+            </div>-->
+        </a>
+        <div class="shadow bg-body rounded mt-4 ml-auto col-2 col-sm-1 text-center btn roodBtn" onClick="window.location.reload();" (click)="delete(thema.id)">
+            <i style="font-size: 20px;" class="mt-4 far fa-trash-alt"></i>
+        </div>
+    </div>
+</div>
+<div style="height: 1rem;"></div>

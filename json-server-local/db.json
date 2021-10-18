@@ -1,32 +1,74 @@
 {
   "items": [
     {
-      "id": 3,
-      "title": "To do app",
-      "content": "App maken en inleveren.",
-      "date": "25 oktober",
-      "active": false
+      "id": 1,
+      "title": "Angular",
+      "content": "To do app maken",
+      "date": "2021-11-28",
+      "active": true,
+      "themaId": 3
     },
     {
       "id": 2,
-      "title": "Fietsenmaker",
-      "content": "Je remmen laten controlleren.",
-      "date": "8 oktober",
-      "active": false
+      "title": "Mobile development",
+      "content": "Uploaden video project",
+      "date": "2021-11-07",
+      "active": false,
+      "themaId": 3
+    },
+    {
+      "id": 3,
+      "title": "Project 4.0",
+      "content": "plan van aanpak inleveren",
+      "date": "2021-10-18",
+      "active": true,
+      "themaId": 3
     },
     {
       "id": 4,
-      "title": "Dokter",
-      "content": "Corona test laten doen",
-      "date": "10 oktober",
-      "active": true
+      "title": "Stage",
+      "content": "Presentatie maken: wie ben ik, wat weet ik over Cegeka, wat is mijn meerwaarde aan de stage",
+      "date": "2021-10-18",
+      "active": true,
+      "themaId": "4"
     },
     {
       "id": 6,
-      "title": "Fira",
-      "content": "Effen met Fira bellen",
-      "date": "13 Oktober",
-      "active": true
+      "title": "Voetbal",
+      "content": "Match",
+      "date": "2021-10-22",
+      "active": false,
+      "themaId": "1"
+    },
+    {
+      "id": 7,
+      "title": "Café",
+      "content": "Pinten drinken met de mannen",
+      "date": "2021-10-21",
+      "active": false,
+      "themaId": "5"
+    }
+  ],
+  "Themas": [
+    {
+      "id": 1,
+      "name": "sport",
+      "color": "#0080c0"
+    },
+    {
+      "id": 3,
+      "name": "School",
+      "color": "#ffff00"
+    },
+    {
+      "id": 4,
+      "name": "Stage",
+      "color": "#ff0000"
+    },
+    {
+      "id": 5,
+      "name": "vrije tijd",
+      "color": "#008000"
     }
   ]
 }
